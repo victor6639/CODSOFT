@@ -3,83 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DreamWeb | Aesthetic Landing Page</title>
+  <title>Glass Calculator</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="wrapper">
+    <div class="calculator">
+      <input type="text" id="display" disabled />
+      <div class="buttons">
+        <button class="btn clear" onclick="clearDisplay()">C</button>
+        <button class="btn del" onclick="deleteLast()">DEL</button>
+        <button class="btn operator" onclick="appendOperator('%')">%</button>
+        <button class="btn operator" onclick="appendOperator('/')">÷</button>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">DreamWeb</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+        <button class="btn" onclick="appendNumber('7')">7</button>
+        <button class="btn" onclick="appendNumber('8')">8</button>
+        <button class="btn" onclick="appendNumber('9')">9</button>
+        <button class="btn operator" onclick="appendOperator('*')">×</button>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Design Your Dream Website</h1>
-      <p>Create stunning and responsive websites that bring your brand to life.</p>
-      <a href="#contact" class="btn">Get Started</a>
-    </div>
-  </section>
+        <button class="btn" onclick="appendNumber('4')">4</button>
+        <button class="btn" onclick="appendNumber('5')">5</button>
+        <button class="btn" onclick="appendNumber('6')">6</button>
+        <button class="btn operator" onclick="appendOperator('-')">−</button>
 
-  <!-- Features -->
-  <section id="features" class="features">
-    <h2>Our Features</h2>
-    <div class="feature-container">
-      <div class="feature-box">
-        <h3>✨ Modern Design</h3>
-        <p>Elegant and creative layouts that make your website visually striking.</p>
+        <button class="btn" onclick="appendNumber('1')">1</button>
+        <button class="btn" onclick="appendNumber('2')">2</button>
+        <button class="btn" onclick="appendNumber('3')">3</button>
+        <button class="btn operator" onclick="appendOperator('+')">+</button>
+
+        <button class="btn zero" onclick="appendNumber('0')">0</button>
+        <button class="btn" onclick="appendNumber('.')">.</button>
+        <button class="btn equal" onclick="calculate()">=</button>
       </div>
-      <div class="feature-box">
-        <h3>📱 Fully Responsive</h3>
-        <p>Seamlessly adapts to every device — from phones to desktops.</p>
-      </div>
-      <div class="feature-box">
-        <h3>⚙ Easy Customization</h3>
-        <p>Clean, organized code that lets you personalize with ease.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="about">
-    <div class="about-content">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Team" />
-      <div class="about-text">
-        <h2>About Us</h2>
-        <p>
-          We’re a passionate team of designers and developers crafting digital experiences that inspire. 
-          From startups to brands, we help ideas shine online with creativity and precision.
-        </p>
-        <a href="#contact" class="btn secondary">Learn More</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2>Let's Work Together</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 DreamWeb | Crafted with 💖 and creativity</p>
-  </footer>
-
+    
+  <script src="script.js"></script>
 </body>
 </html>
